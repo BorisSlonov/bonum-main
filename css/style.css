@@ -347,10 +347,6 @@ body {
   }
 }
 
-.custom-range {
-  background-color: #11cdfa;
-}
-
 .lang-btn {
   padding: 1px 20px 1px 10px;
   background-color: #fff;
@@ -599,21 +595,36 @@ body {
 }
 
 .card-label {
+  position: relative;
   padding-left: 5px;
   padding-right: 5px;
 }
 
+.card-label::after {
+  content: '';
+  display: block;
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  left: 0;
+  background-color: white;
+  -webkit-transform: translateY(-5px) scale(0);
+          transform: translateY(-5px) scale(0);
+  -webkit-transition: all .45s;
+  transition: all .45s;
+}
+
 a[class*=bg-] {
-  -webkit-transition: all .8s;
-  transition: all .8s;
+  -webkit-transition: all .94s;
+  transition: all .94s;
 }
 
 a[class*=bg-]:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  border: 1px solid #fff;
-  -webkit-box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.308);
-          box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.308);
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+  border: 1px solid rgba(255, 255, 255, 0.821);
+  -webkit-box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.208);
+          box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.208);
   position: relative;
   z-index: 10;
 }
@@ -622,26 +633,9 @@ a[class*=bg-]:active {
   border: 1px solid #11cdfa;
 }
 
-a[class*=bg-] span {
-  position: relative;
-}
-
-a[class*=bg-] span::after {
-  content: '';
-  display: block;
-  width: 30%;
-  position: absolute;
-  height: 2px;
-  background-color: #fff;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
-a[class*=bg-] span:hover::after {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+a[class*=bg-]:hover .card-label::after {
+  -webkit-transform: translateY(10px) scale(1);
+          transform: translateY(10px) scale(1);
 }
 
 .bg-program {
