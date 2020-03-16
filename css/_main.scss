@@ -77,6 +77,15 @@
     }
 }
 
+@media (max-width: 425px) {
+    .text-down-left {
+        span {
+            margin-left: 5px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
 //size and align
 
 @media (max-width: 768px) {
@@ -153,14 +162,9 @@ a[class*=bg-] {
 
     &:hover {
         transform: scale(1.08);
-        border: 1px solid rgba(255, 255, 255, 0.821);
-        box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.208);
+        box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.408);
         position: relative;
         z-index: 10;
-    }
-
-    &:active {
-        border: 1px solid $sec-color;
     }
 
     &:hover .card-label {
